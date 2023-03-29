@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: rgba(51, 62, 69, 0.912);
+  --secondary-color: rgb(0, 177, 162);
+  --white-text: #fffffff5;
+  --primary-color-button-hover: rgba(41, 49, 54, 0.936);
+  --secondary-color-button-hover: rgb(1, 158, 145);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 98vw;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  padding: 1.5rem;
+}
+
+body button {
+  cursor: pointer;
+}
+
+body p,
+body h1,
+body h2 {
+  cursor: default;
+}
+
+body p::selection,
+body h1::selection,
+body h2::selection,
+body h3::selection,
+body span::selection,
+body i::selection,
+body img::selection,
+body button::selection {
+  background-color: var(--secondary-color);
+  color: var(--white-text);
+}
+
+span[number-style] {
+  font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(51, 62, 69, 0.211);
+  border-radius: 30px;
+  box-shadow: 1px 1px 2px rgba(51, 62, 69, 0.651);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 30px;
+}
+
+input:focus,
+input:active {
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+.disabled {
+  background-color: var(--primary-color) !important;
+  cursor: not-allowed;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  color: #fff;
+  max-width: 330px;
+  padding: 10px;
+  border-radius: 5px;
+  animation: fadeInAndOut ease-in 5s;
+}
+
+@keyframes fadeInAndOut {
+  0% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(400%);
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .notification {
+    right: 0;
+  }
+}

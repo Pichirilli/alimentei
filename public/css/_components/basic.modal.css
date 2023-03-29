@@ -1,0 +1,111 @@
+.login-modal {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.login-modal__content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  width: 90%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.login-modal__content-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.content-top__close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.content-top__close i {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.login-modal__content-main .modal__content-main__form {
+  width: 100%;
+}
+
+.modal__content-main__form label {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  display: block;
+  margin: 5px 0;
+}
+
+.modal__content-main__form input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 5px 0 5px 3px;
+  caret-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: 400;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.content-main__form-avatar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content-main__form-image__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-main__form-image__container .selected {
+  border: 4px solid var(--secondary-color);
+  border-radius: 50%;
+}
+
+.modal__content-main__form img {
+  min-width: 65px;
+  width: 15vw;
+  max-width: 120px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.content-main__form-submit {
+  margin-top: 1.5rem;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  background: var(--secondary-color);
+  color: var(--white-text);
+  border-radius: 7px;
+  transition: background 0.2s;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.content-main__form-submit:hover,
+.content-main__form-submit:active {
+  background: var(--secondary-color-button-hover);
+}
